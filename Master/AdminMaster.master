@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/MasterPage.master" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Master_AdminMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
+    <div id="menu">
+        <ul id="trans-nav">
+            <li><a href="../PageAdmin/Admin.aspx">My Home</a></li>
+            <li><a href="../PageAdmin/DeleteUser.aspx">Delete User</a></li>
+            <li><a href="../PageAdmin/IssueRecords.aspx">Issue Books</a></li>
+            <li><a href="../PageAdmin/ReturnRestore.aspx">Restore Books</a></li>
+            <li><a href="../PageAdmin/StoreInfo.aspx">Add Books</a></li>
+            <li><a href="../PageAdmin/ViewInformation.aspx">View Users</a></li>
+            <li><a href="../PageUser/Setting.aspx">Settings</a></li>
+        </ul>
+    </div>
+    <asp:ContentPlaceHolder runat="server" ID="contentuser">
+    </asp:ContentPlaceHolder>
+
+   
+</asp:Content>
+
+
+

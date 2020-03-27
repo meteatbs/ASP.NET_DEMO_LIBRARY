@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Master_MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+     <script type="text/javascript">
+
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main" style="border: solid 1px">
+
+      <div id="header">
+                <img src="../Images/logo.png" style="float: left; width: 945px;" height="108" />
+                
+            </div>
+            <div id="usermenu">
+                <ul id="navnew">
+                    <li class="current"><a href="../PageCommon/index.aspx">Home</a></li>
+                    <li><a href="../PageCommon/Search.aspx">Search Books</a></li>
+                    
+                    <li><a href="../PageCommon/Feedback.aspx">Feedback</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="../PageCommon/AboutUs.aspx">About Us</a></li>
+                </ul>
+            </div>
+            <div id="show">
+                <div id="lefs"  style="width: 710px; display: block; float: left">
+                    
+                    <marquee>Welcome to Education Library</marquee>
+                </div>
+                <div id="righs" style="float: right">
+                    
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            [ <a href="~/PageCommon/login.aspx" id="HeadLoginStatus" runat="server" style="color: #00BFBF; font-size: medium;">Log In</a> ]
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Welcome <span class="bold">
+                                <asp:HyperLink ID="HyperLink1" ForeColor="PeachPuff" Font-Size="Larger" ToolTip="MyHome"  runat="server"> <asp:LoginName ID="HeadLoginName" runat="server" /></asp:HyperLink>
+                            </span>&nbsp;&nbsp;
+                            [
+                            <asp:LoginStatus ID="HeadLoginStatus" ForeColor="#87cfe6" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/PageCommon/index.aspx" />
+                            ]
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+          <div id="footer">
+                <hr />
+             <div style="float:left;">
+                 <p>&copy; 2020 MeteA</p>
+             </div>
+                <div style="float:right">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <b>Find Us :</b>
+                            </td>
+                            <td>
+                                &nbsp;&nbsp;
+                            </td>
+                            <td>
+                               <a href="https://github.com/meteatbs">
+                                   <img src="../Images/github.png" width="40" height="40"/>
+                               </a>
+                            </td>
+                             <td>
+                                &nbsp;&nbsp;
+                            </td>
+                            <td>
+                               <a href="meteatbas@gmail.com">
+                                   <img src="../Images/gmail.png" width="30" height="35"/>
+                               </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
